@@ -1,0 +1,8 @@
+name "discoverer"
+description "A minimal D application."
+authors "Sealab"
+copyright "Copyright © 2021, Sealab"
+license "proprietary"
+dependency "htmld" version="~>0.3.7"
+dependency "vibe-d" version="~>0.9.3"
+dependency "database" path="../database"

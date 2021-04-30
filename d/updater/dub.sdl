@@ -1,0 +1,8 @@
+name "updater"
+description "A minimal D application."
+authors "Sealab"
+copyright "Copyright © 2021, Sealab"
+license "proprietary"
+dependency "vibe-d" version="~>0.9.3"
+dependency "htmld" version="~>0.3.7"
+dependency "database" path="../database"

@@ -1,0 +1,17 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/discoverer
+discoverer.so
+discoverer.dylib
+discoverer.dll
+discoverer.a
+discoverer.lib
+discoverer-test-*
+*.exe
+*.o
+*.obj
+*.lst
+*.dll
+connection_string.txt

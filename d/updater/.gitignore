@@ -1,0 +1,17 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/updater
+updater.so
+updater.dylib
+updater.dll
+updater.a
+updater.lib
+updater-test-*
+*.exe
+*.o
+*.obj
+*.lst
+*.dll
+connection_string.txt

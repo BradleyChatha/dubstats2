@@ -1,0 +1,8 @@
+name "database"
+description "A minimal D application."
+authors "Sealab"
+copyright "Copyright © 2021, Sealab"
+license "proprietary"
+
+targetType "library"
+libs "${PACKAGE_DIR}/lib/windows-x64/libpq" platform="windows"

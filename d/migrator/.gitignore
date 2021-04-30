@@ -1,0 +1,16 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/migrator
+migrator.so
+migrator.dylib
+migrator.dll
+migrator.a
+migrator.lib
+migrator-test-*
+*.exe
+*.o
+*.obj
+*.lst
+connection_string.txt

@@ -1,0 +1,6 @@
+name "migrator"
+description "A minimal D application."
+authors "Sealab"
+copyright "Copyright © 2021, Sealab"
+license "proprietary"
+dependency "database" path="../database"
