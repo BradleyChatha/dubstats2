@@ -1,0 +1,11 @@
+[Unit]
+Description=Scrapes over the package index, looking for any new packages.
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/ds-discover
+RestartSec=3600
+Restart=on-failure
+
+[Install]
+WantedBy=network-online.target

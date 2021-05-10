@@ -1,0 +1,11 @@
+[Unit]
+Description=Updates the next out-of-date package.
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/ds-update
+RestartSec=30
+Restart=on-failure
+
+[Install]
+WantedBy=network-online.target
