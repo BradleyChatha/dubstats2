@@ -3,6 +3,7 @@ Description=Scrapes over the package index, looking for any new packages.
 
 [Service]
 Type=simple
+WorkingDirectory=/usr/local/bin
 ExecStart=/usr/local/bin/ds-discover
 RestartSec=3600
 Restart=on-failure

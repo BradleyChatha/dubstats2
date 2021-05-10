@@ -3,6 +3,7 @@ Description=Updates the next out-of-date package.
 
 [Service]
 Type=simple
+WorkingDirectory=/usr/local/bin
 ExecStart=/usr/local/bin/ds-update
 RestartSec=30
 Restart=on-failure

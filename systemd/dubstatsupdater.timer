@@ -2,7 +2,7 @@
 Description=Run the DubStats updater every minute.
 
 [Timer]
-OnCalendar=*:0/1:*
+OnCalendar=*:0/1
 Persistent=true
 
 [Install]

@@ -6,4 +6,4 @@ license "proprietary"
 
 targetType "library"
 libs "${PACKAGE_DIR}/lib/windows-x64/libpq" platform="windows"
-libs "libpq" platform="posix"
+libs "pq" platform="posix"

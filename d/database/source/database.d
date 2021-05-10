@@ -6,7 +6,7 @@ module database;
 import std.conv : to;
 import std.traits : isSomeString, isNumeric, isBoolean;
 import std.exception : enforce;
-import std.string : fromStringz, toStringz;
+import std.string : fromStringz, toStringz, chomp;
 import std.stdio : writeln, writefln;
 import libpq_fe;
 
@@ -59,7 +59,7 @@ final class Database
     this(string connectionString)
     {
         const keywords = ["dbname".ptr, null];
-        const char* value = connectionString.toStringz;
+        const char* value = connectionString.chomp.toStringz; // Not 100% sure why, but on Linux, the connectionString *always* has a new line even if it's not in the file?????
         this._conn = PQconnectdbParams(keywords.ptr, &value, 1);
 
         const status = PQstatus(this._conn);
