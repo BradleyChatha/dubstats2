@@ -101,7 +101,7 @@ StatsResult parseStats(string stats)
 {
     auto json = parseJsonString(stats);
     StatsResult result;
-    result.score            = json["score"].get!double;
+    result.score            = json["score"].to!double;
     result.downloads_total  = json["downloads"]["total"].get!uint;
     result.stars            = json["repo"]["stars"].get!uint;
     result.watchers         = json["repo"]["watchers"].get!uint;
@@ -115,7 +115,7 @@ InfoResult parseInfo(string info)
 {
     auto json = parseJsonString(info);
     InfoResult result;
-    result.depNames = json["info"]["dependencies"].byKeyValue.map!(kv => kv.key).array;
+    try result.depNames = json["info"]["dependencies"].byKeyValue.map!(kv => kv.key).array; catch(JSONException){}
     result.semver = json["version"].get!string;
 
     return result;

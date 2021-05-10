@@ -157,6 +157,4 @@ $$ LANGUAGE PLPGSQL;
 CREATE TRIGGER on_package_new_stats AFTER INSERT ON package_update
 FOR EACH ROW EXECUTE PROCEDURE _update_package_next_update();
 
-DROP TABLE migrations; -- This line will be removed once this migration is finalised.
-
 COMMIT;

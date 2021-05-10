@@ -74,7 +74,7 @@ final class Database
 
     RowResult execute(string command)
     {
-        //debug writeln("Executing command: "~command);
+        debug writeln("Executing command: "~command);
 
         auto result = PQexec(this._conn, command.toStringz);
         const status = PQresultStatus(result);
@@ -84,7 +84,7 @@ final class Database
 
     RowResult execute(string command, string[] args...)
     {
-        //debug writefln("Executing:\n\t%s\nArgs: %s", command, args);
+        debug writefln("Executing:\n\t%s\nArgs: %s", command, args);
 
         const(char)*[] newArgs;
         newArgs.length = args.length;
