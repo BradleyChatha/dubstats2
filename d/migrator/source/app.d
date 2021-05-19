@@ -10,7 +10,8 @@ struct Migration
 
 const MIGRATIONS = 
 [
-    Migration("init", import("00_init.sql"))
+    Migration("init", import("00_init.sql")),
+    Migration("increase_semver_limit", import("01_increase_semvar_limit.sql"))
 ];
 
 void main()
@@ -22,7 +23,7 @@ void main()
     {
         writeln("Executing migration: ", migration.name);
         db.execute(migration.sql);
-        //db.execute("INSERT INTO migrations(name) VALUES ($1)", migration.name);
+        db.execute("INSERT INTO migrations(name) VALUES ($1)", migration.name);
     }
 }
 
