@@ -33,6 +33,12 @@ void main()
     auto stats    = getStats(toUpdate).parseStats;
     auto info     = getInfo(toUpdate).parseInfo;
 
+    if(toUpdate == NextToUpdate.init)
+    {
+        writeln("No work to do");
+        return;
+    }
+
     writeln("Updating: ", toUpdate.name);
 
     db.execute(
